@@ -4,7 +4,9 @@
   
 ###run:
   cd option-market-1.0-SNAPSHOT-distribution
+
   chmod +x marketdata.sh
+
   ./marketdata.sh   (starts market data and jms borker at tcp://localhost:61616)
   
 ## options-data-ref-0.0.1-SNAPSHOT.jar
