@@ -1,0 +1,23 @@
+##Run Book
+#How to start the Market Data Server + JMS Broker
+	option-market-1.0-SNAPSHOT-distribution.jar
+	extract jar - to a folder -
+	chmod +x marketdata.sh
+	./marketdata.sh
+	
+#How to start Reference Data
+    copy options-data-ref-0.0.1-SNAPSHOT.jar, OptionData.csv and application.properties to a folder
+	java -jar options-data-ref-0.0.1-SNAPSHOT.jar
+
+
+#How to start Storm
+ . Start zookeeper
+ 	under bin of zookeeper ./zkserver.sh start
+ . Start nimbus
+ 	under bin of storm ./storm nimbus
+ . Start supervisor
+ 	under bin of storm ./storm supervisor
+	
+
+#How to run storm topplogy
+./storm jar optionpricing-0.0.1-SNAPSHOT.jar com.wf.option.pricing.OptionPricingJmsTopology http://localhost:8080/refdata/option false -c nimbus.host=127.0.0.1
