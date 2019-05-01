@@ -20,4 +20,16 @@
 	
 
 #How to run storm topplogy
-./storm jar optionpricing-0.0.1-SNAPSHOT.jar com.wf.option.pricing.OptionPricingJmsTopology http://localhost:8080/refdata/option false -c nimbus.host=127.0.0.1
+./storm jar optionpricing-0.0.1-SNAPSHOT.jar com.wf.option.pricing.OptionPricingJmsTopology http://localhost:8080/refdata/option remote -c nimbus.host=127.0.0.1
+
+
+wget https://raw.githubusercontent.com/hemsandy/cmt-artifacts/master/OptionData25k.csv
+wget https://raw.githubusercontent.com/hemsandy/cmt-artifacts/master/application.properties
+wget https://raw.githubusercontent.com/hemsandy/cmt-artifacts/master/option-market-1.0-SNAPSHOT-distribution.jar
+wget https://raw.githubusercontent.com/hemsandy/cmt-artifacts/master/optionpricing-0.0.1-SNAPSHOT.jar
+wget https://raw.githubusercontent.com/hemsandy/cmt-artifacts/master/options-data-ref-0.0.1-SNAPSHOT.jar
+wget https://raw.githubusercontent.com/hemsandy/cmt-artifacts/master/runbook.txt
+
+
+
+
