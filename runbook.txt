@@ -23,7 +23,8 @@
 ./storm jar optionpricing-0.0.1-SNAPSHOT.jar com.wf.option.pricing.OptionPricingJmsTopology http://localhost:8080/refdata/option remote -c nimbus.host=127.0.0.1
 ./storm jar optionpricing-0.0.1-SNAPSHOT.jar com.wf.option.pricing.OptionPricingJmsTopology http://ec2-18-223-22-9.us-east-2.compute.amazonaws.com:8080/refdata/option remote -c nimbus.host=127.0.0.1
 
-./storm jar optionpricing-0.0.1-SNAPSHOT.jar com.wf.option.pricing.OptionPricingJmsTopology http://nimbus:8080/refdata/option remote rediss
+storm jar optionpricing-0.0.1-SNAPSHOT.jar com.wf.option.pricing.OptionPricingJmsTopology http://nimbus:8080/refdata/option remote redis
+storm jar optionpricing-0.0.1-SNAPSHOT.jar com.wf.option.pricing.OptionPricingJmsTopology http://nimbus:8080/refdata/option remote kafka
 
 
 ec2-18-223-22-9.us-east-2.compute.amazonaws.com
@@ -36,6 +37,22 @@ wget https://raw.githubusercontent.com/hemsandy/cmt-artifacts/master/optionprici
 wget https://raw.githubusercontent.com/hemsandy/cmt-artifacts/master/options-data-ref-0.0.1-SNAPSHOT.jar
 wget https://raw.githubusercontent.com/hemsandy/cmt-artifacts/master/runbook.txt
 
+
+https://raw.githubusercontent.com/hemsandy/cmt-artifacts/master/OptionData_py_24k.csv
+
+
+
+1
+> bin/kafka-topics.sh --create --bootstrap-server supervisor1:9092 --replication-factor 1 --partitions 1 --topic OPTION.KAFKA.PRICED.TOPIC
+
+
+137:2019-05-06 12:36:14.863 OptionPricerBolt Thread-7-OPTION_PRICING_BOLT-executor[2 2] [INFO] Final price calculated for option : AAPL190920C00260000 is : 0.0 : **BATCH_ID_1**
+83916:2019-05-06 12:37:27.169 OptionPricerBolt Thread-7-OPTION_PRICING_BOLT-executor[2 2] [INFO] Final price calculated for option : AAPL190621C00155000-45 is : 45.7992708800899 : **BATCH_ID_5**
+
+wget http://download.redis.io/redis-stable.tar.gz
+tar xvzf redis-stable.tar.gz
+cd redis-stable
+make
 
 
 
