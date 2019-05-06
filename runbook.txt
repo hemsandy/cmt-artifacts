@@ -23,7 +23,7 @@
 ./storm jar optionpricing-0.0.1-SNAPSHOT.jar com.wf.option.pricing.OptionPricingJmsTopology http://localhost:8080/refdata/option remote -c nimbus.host=127.0.0.1
 ./storm jar optionpricing-0.0.1-SNAPSHOT.jar com.wf.option.pricing.OptionPricingJmsTopology http://ec2-18-223-22-9.us-east-2.compute.amazonaws.com:8080/refdata/option remote -c nimbus.host=127.0.0.1
 
-./storm jar optionpricing-0.0.1-SNAPSHOT.jar com.wf.option.pricing.OptionPricingJmsTopology http://nimbus:8080/refdata/option remote rediss
+./storm jar optionpricing-0.0.1-SNAPSHOT.jar com.wf.option.pricing.OptionPricingJmsTopology http://nimbus:8080/refdata/option remote redis
 
 
 ec2-18-223-22-9.us-east-2.compute.amazonaws.com
@@ -36,6 +36,8 @@ wget https://raw.githubusercontent.com/hemsandy/cmt-artifacts/master/optionprici
 wget https://raw.githubusercontent.com/hemsandy/cmt-artifacts/master/options-data-ref-0.0.1-SNAPSHOT.jar
 wget https://raw.githubusercontent.com/hemsandy/cmt-artifacts/master/runbook.txt
 
+
+https://raw.githubusercontent.com/hemsandy/cmt-artifacts/master/OptionData_py_24k.csv
 
 
 
