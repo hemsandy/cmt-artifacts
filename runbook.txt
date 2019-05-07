@@ -46,8 +46,8 @@ storm jar optionpricing-0.0.1-SNAPSHOT.jar  -Dnum.workers=1 -Dnum.spouts=1  -Dnu
 storm jar optionpricing-0.0.1-SNAPSHOT.jar  -Dnum.workers=1 -Dnum.spouts=1  -Dnum.pricers=4 -Dnum.publishers=4 -Dredis.host=zookeeper -Dredis.port=6379 com.wf.option.pricing.OptionPricingJmsTopology http://nimbus:8080/refdata/option remote noemit
 
 
-
-
+# New Pricing jar.. Spring Boot Application
+java -jar -Dserver.port=9000 option-pricing-0.1.0.jar  
 
 
 # Connect to aws from linux/mac
