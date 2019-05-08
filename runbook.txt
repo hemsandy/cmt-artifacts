@@ -13,6 +13,12 @@
  . Start supervisor
  	under bin of storm ./storm supervisor
 
+http://ec2-3-14-3-180.us-east-2.compute.amazonaws.com:8081/topology.html?id=OPTION_PRICING_TOPOLOGY-1-1557303527
+
+
+http://ec2-13-59-173-13.us-east-2.compute.amazonaws.com:8161/admin/queues.jsp
+
+
 #How to start Reference Data
     copy options-data-ref-0.0.1-SNAPSHOT.jar, OptionData.csv and application.properties to a folder
 	java -jar options-data-ref-0.0.1-SNAPSHOT.jar
